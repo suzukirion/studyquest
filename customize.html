@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>StudyQuest | Customize</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <script>
+        if (sessionStorage.getItem("sq_isLoggedIn") !== "1") {
+        location.href = "login.html";
+        }
+    </script>
+</head>
+<body class="theme-rpg rpg-sky">
+    <!-- 雲たち -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+    <div class="cloud cloud5"></div>
+    <header class="header container">
+        <h1 class="logo">
+            <a href="index.html">StudyQuest</a>
+        </h1>
+        <nav class="nav">
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact</a>
+            <a href="customize.html">Customize</a>
+        </nav>
+    </header>
+    <main class="container">
+    <!-- ステータス -->
+    <section class="status grid-2 contact-status">
+        <div>
+            <div id="now" class="status__now">--/-- --:--:--</div>
+        </div>
+        <!-- <div>
+            <h2 class="h2">現在のEXP</h2>
+            <div id="exp" class="status__exp">0</div>
+            <p class="muted">200EXPでUn-lock</p> -->
+        </div>
+    </section>
+    <section class="card customize-card">
+        <h2 class="h2">Customize</h2>
+        <p class="muted">テーマカラーや時計表示を変更できます!</p>
+        <div class="custom-group">
+            <p class="custom-label">Theme Color</p>
+            <div class="custom-options">
+                <button class="btn theme-btn" type="button" data-theme="blue">Blue</button>
+                <button class="btn theme-btn" type="button" data-theme="green">Green</button>
+                <button class="btn theme-btn" type="button" data-theme="purple">Purple</button>
+            </div>
+        </div>
+
+        <div class="custom-group">
+            <p class="custom-label">Clock Color</p>
+            <div class="custom-options">
+                <button class="btn clock-btn" type="button" data-clock="white">Black</button>
+                <button class="btn clock-btn" type="button" data-clock="gold">Gold</button>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="footer">© 2025 StudyQuest. All rights reserved.</footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="main.js"></script>
+    <div class="ground"></div>
+</body>
+</html>
